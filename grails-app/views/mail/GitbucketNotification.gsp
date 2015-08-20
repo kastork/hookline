@@ -31,7 +31,7 @@
 
 <%@ page import="grails.converters.JSON" %>
 <%@ page contentType="text/plain"%>
-Pushes executed by: ${data.pusher}
+Pushes executed by: ${data}
 Repository: ${data.repository.name} (${data.repository.url})
 <g:each var="commit" in="${data.commits}">
 ---------
