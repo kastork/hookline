@@ -59,7 +59,7 @@ class CommitHookController
             async true
             to params.destination
             from "Gitbucket <pogy@ern.nps.edu>"
-            subject "${data.pusher.name} pushed to repository ${data.repository.name}"
+            subject "${data.pusher.fullName} pushed to repository ${data.repository.name}"
             body(view: "/mail/GitbucketNotification", model: [data: data])
         }
 
