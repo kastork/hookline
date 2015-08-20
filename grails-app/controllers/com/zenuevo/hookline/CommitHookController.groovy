@@ -55,11 +55,13 @@ class CommitHookController
 //        )
 //      println("\n\n$gspOutput\n\n")
 
+        log.debug(data.toString())
+
         mailService.sendMail {
             async true
             to params.destination
             from "Gitbucket <pogy@ern.nps.edu>"
-            subject "${data.pusher.fullName} pushed to repository ${data.repository.name}"
+            subject "${data.pusher.login} pushed to repository ${data.repository.name}"
             body(view: "/mail/GitbucketNotification", model: [data: data])
         }
 

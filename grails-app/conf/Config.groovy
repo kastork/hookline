@@ -115,7 +115,8 @@ log4j.main = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 
-    trace "grails.plugin.mail"
+    error "grails.app.controllers"
+    error "grails.plugin.mail"
 }
 
 grails {
